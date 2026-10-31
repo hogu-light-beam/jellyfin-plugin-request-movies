@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Jellyfin.Plugin.RequestMovies</RootNamespace>
+    <AssemblyVersion>12.0.0.1</AssemblyVersion>
+    <FileVersion>12.0.0.1</FileVersion>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Références hôte en compilation seule : Jellyfin fournit ses propres DLL à l'exécution. -->
+    <PackageReference Include="Jellyfin.Controller" Version="12.0.*-*" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\configPage.html" />
+    <EmbeddedResource Include="Web\client.js" />
+  </ItemGroup>
+
+</Project>
