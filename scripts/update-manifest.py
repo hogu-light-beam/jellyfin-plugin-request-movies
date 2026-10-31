@@ -22,7 +22,7 @@ checksum = hashlib.md5(open(zip_path, "rb").read()).hexdigest()
 entry_version = {
     "version": version,
     "changelog": f"Version {version}",
-    "targetAbi": meta.get("targetAbi", "12.0.0.0"),
+    "targetAbi": meta.get("targetAbi", "12.4.0"),
     "sourceUrl": url,
     "checksum": checksum,
     "timestamp": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
